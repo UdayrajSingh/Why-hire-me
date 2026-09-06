@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Why Hire Me — Udayraj</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:#050505;color:#f4f4f0;font-family:Inter,Arial,sans-serif;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+:root{--lime:#d9ff3f;--gray:#777;--line:#222}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+nav{height:68px;position:fixed;z-index:10;top:0;left:0;right:0;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;border-bottom:1px solid #171717;background:rgba(5,5,5,.8);backdrop-filter:blur(16px)}
+.logo{font-weight:900;letter-spacing:-.05em}.logo i{font-style:normal;color:var(--lime)}
+.navActions{display:flex;align-items:center}
+.topContact{border:1px solid #3a3a3a;padding:10px 15px;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;transition:.25s}
+.topContact:hover{background:var(--lime);color:#050505;border-color:var(--lime)}
+section{min-height:92vh;padding:105px 7vw;display:flex;align-items:center;position:relative}
+.hero{min-height:100svh;padding-top:150px;overflow:hidden}
+.heroGrid{position:absolute;inset:0;background-image:linear-gradient(#151515 1px,transparent 1px),linear-gradient(90deg,#151515 1px,transparent 1px);background-size:100px 100px;mask-image:linear-gradient(to bottom,#000,transparent 90%);opacity:.45}
+.heroGlow{position:absolute;width:55vw;height:55vw;right:-25vw;top:5vh;border-radius:50%;background:radial-gradient(circle,rgba(217,255,63,.14),transparent 68%);filter:blur(20px)}
+.heroInner{position:relative;z-index:2;width:100%}
+.kicker{font-size:11px;text-transform:uppercase;letter-spacing:.24em;color:var(--lime);margin-bottom:28px}
+.hero h1{font-size:clamp(48px,7.2vw,108px);line-height:.86;letter-spacing:-.075em;text-transform:uppercase;max-width:1200px}
+.hero h1 .stroke{color:transparent;-webkit-text-stroke:1px #777}
+.hero h1 .lime{color:var(--lime)}
+.heroFoot{display:flex;justify-content:space-between;align-items:flex-end;max-width:1100px;margin-top:58px}
+.heroFoot p{max-width:470px;color:#888;line-height:1.65;font-size:15px}
+.scroll{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:#555;text-align:right}.scroll b{display:block;color:#eee;font-size:24px;margin-top:6px}
+
+.marquee{height:115px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;display:flex;align-items:center;background:#090909}
+.marqueeTrack{white-space:nowrap;font-size:clamp(32px,4.8vw,72px);font-weight:900;letter-spacing:-.07em;animation:slide 24s linear infinite}
+.marqueeTrack span{margin:0 25px}.dot{color:var(--lime)}
+@keyframes slide{to{transform:translateX(-50%)}}
+
+.content{width:100%;max-width:1250px}
+.label{font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:#555}
+.title{font-size:clamp(44px,6.2vw,82px);line-height:.88;letter-spacing:-.065em;margin-top:24px}
+.title em{font-style:normal;color:var(--lime)}
+
+.identity{background:#080808}
+.identityGrid{display:grid;grid-template-columns:1fr 1fr;gap:9vw}
+.identityCopy p{margin-top:38px;color:#888;max-width:470px;font-size:17px;line-height:1.75}
+.identityCopy p strong{color:#eee}
+.statement{border-left:1px solid #2a2a2a;padding-left:5vw;display:flex;flex-direction:column;justify-content:center}
+.statementLine{font-size:clamp(23px,2.7vw,38px);font-weight:800;letter-spacing:-.055em;padding:25px 0;border-bottom:1px solid #202020}
+.statementLine:first-child{border-top:1px solid #202020}
+.statementLine span{color:#555;font-size:11px;letter-spacing:.15em;display:block;margin-bottom:9px;font-weight:500}
+.statementLine:hover{color:var(--lime);padding-left:15px;transition:.3s}
+
+.values{background:#050505}
+.valueHeader{display:flex;justify-content:space-between;align-items:end;margin-bottom:70px}
+.valueHeader p{max-width:300px;color:#777;font-size:13px;line-height:1.6}
+.valuesGrid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #252525}
+.value{padding:35px 35px 35px 0;border-right:1px solid #252525;min-height:310px;position:relative}
+.value:not(:first-child){padding-left:30px}
+.value:last-child{border-right:0}
+.valueNo{font-size:10px;color:#555;letter-spacing:.15em}
+.value h3{font-size:clamp(26px,2.7vw,38px);letter-spacing:-.055em;margin-top:80px}
+.value p{color:#777;font-size:13px;line-height:1.6;margin-top:20px;max-width:260px}
+.value h3:after{content:"↗";font-size:22px;color:var(--lime);margin-left:10px;opacity:0;transition:.3s}
+.value:hover h3:after{opacity:1}
+
+.mindset{min-height:80vh;background:var(--lime);color:#050505}
+.mindsetInner{width:100%}
+.mindset .label{color:#566700}
+.mindset h2{font-size:clamp(45px,6.8vw,96px);line-height:.84;letter-spacing:-.075em;margin-top:25px;max-width:1100px}
+.mindset h2 span{display:inline-block}
+.mindsetBottom{display:flex;justify-content:space-between;align-items:end;margin-top:70px;border-top:1px solid #718500;padding-top:24px}
+.mindsetBottom p{max-width:520px;font-size:15px;line-height:1.6}
+.mindsetBottom b{font-size:12px;text-transform:uppercase;letter-spacing:.12em}
+
+.opportunity{background:#080808}
+.oppGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:9vw;width:100%}
+.oppText p{max-width:560px;color:#888;font-size:17px;line-height:1.7;margin-top:35px}
+.oppList{border-top:1px solid #292929}
+.opp{padding:24px 0;border-bottom:1px solid #292929;display:flex;justify-content:space-between;align-items:center}
+.opp span:first-child{font-size:17px}.opp span:last-child{font-size:11px;color:#555;text-transform:uppercase;letter-spacing:.12em}
+.opp:hover span:first-child{color:var(--lime);padding-left:12px;transition:.25s}
+
+.final{min-height:100vh;text-align:center;justify-content:center;overflow:hidden}
+.rings{position:absolute;width:65vw;height:65vw;border:1px solid #181818;border-radius:50%}
+.rings:before,.rings:after{content:"";position:absolute;border:1px solid #151515;border-radius:50%;inset:12%}
+.rings:after{inset:25%}
+.finalInner{position:relative;z-index:2}
+.final h2{font-size:clamp(48px,7.5vw,105px);line-height:.84;letter-spacing:-.075em}
+.final h2 span{color:var(--lime)}
+.final p{color:#777;max-width:450px;margin:38px auto;font-size:15px;line-height:1.6}
+.links{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}
+.links a{border:1px solid #333;padding:14px 19px;font-size:10px;text-transform:uppercase;letter-spacing:.15em;transition:.25s}
+.links a:hover{background:#f4f4f0;color:#050505;border-color:#f4f4f0}
+.note{margin-top:45px;font-size:10px;color:#444;letter-spacing:.12em;text-transform:uppercase}
+footer{border-top:1px solid #181818;padding:20px 7vw;display:flex;justify-content:space-between;color:#444;font-size:9px;letter-spacing:.13em;text-transform:uppercase}
+
+.reveal{opacity:0;transform:translateY(35px);transition:.8s ease}.reveal.show{opacity:1;transform:none}
+@media(max-width:800px){
+ nav{padding:0 20px}.navtag{display:none}section{padding:100px 22px}
+ .hero h1{font-size:13.5vw}.heroFoot{display:block}.scroll{margin-top:35px;text-align:left}
+ .identityGrid,.oppGrid{grid-template-columns:1fr;gap:50px}.statement{border-left:0;padding-left:0}
+ .valuesGrid{grid-template-columns:1fr}.value{border-right:0;border-bottom:1px solid #252525;padding:28px 0!important;min-height:240px}.value h3{margin-top:55px}
+ .valueHeader,.mindsetBottom{display:block}.valueHeader p{margin-top:25px}.mindsetBottom b{display:block;margin-top:25px}
+ .rings{width:120vw;height:120vw}footer{display:block;line-height:2}
+}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+
+<nav>
+  <a class="logo" href="#">UDAYRAJ<span>.</span>DEV</a>
+  <div class="navActions">
+    <a class="topContact" href="#contact">CONTACT ME ↗</a>
+  </div>
+</nav>
+
+<section class="hero">
+ <div class="heroGrid"></div><div class="heroGlow"></div>
+ <div class="heroInner reveal">
+  <div class="kicker">A note for the person deciding</div>
+  <h1>Don't hire me<br>for what I <span class="stroke">know.</span><br>Hire me for<br>what I <span class="lime">become.</span></h1>
+  <div class="heroFoot">
+   <p>I’m a builder. I don't need to know everything before I start. I need a problem, enough curiosity to attack it, and the discipline to keep going until something real exists.</p>
+   <div class="scroll">Scroll to understand<br><b>↓</b></div>
+  </div>
+ </div>
+</section>
+
+<div class="marquee">
+ <div class="marqueeTrack">CURIOUS <span class="dot">✦</span> ADAPTABLE <span class="dot">✦</span> RELENTLESS <span class="dot">✦</span> CREATIVE <span class="dot">✦</span> BUILDER <span class="dot">✦</span> CURIOUS <span class="dot">✦</span> ADAPTABLE <span class="dot">✦</span> RELENTLESS <span class="dot">✦</span> CREATIVE <span class="dot">✦</span> BUILDER <span class="dot">✦</span></div>
+</div>
+
+<section class="identity">
+ <div class="content identityGrid reveal">
+  <div class="identityCopy">
+   <div class="label">01 / Who you're hiring</div>
+   <h2 class="title">A PERSON WHO<br><em>FIGURES IT OUT.</em></h2>
+   <p><strong>I’m not selling a list of technologies.</strong> I’m showing you how I think when the answer isn't obvious.</p>
+   <p>Give me something unfamiliar and I’ll learn it. Give me constraints and I’ll work within them. Give me a difficult problem and I’ll keep pulling at it until I understand where the solution is hiding.</p>
+  </div>
+  <div class="statement">
+   <div class="statementLine"><span>01 — ATTITUDE</span>Curiosity before ego.</div>
+   <div class="statementLine"><span>02 — RESPONSE</span>Problems become experiments.</div>
+   <div class="statementLine"><span>03 — STANDARD</span>Ideas should become real.</div>
+   <div class="statementLine"><span>04 — FINISH</span>I ship, then improve.</div>
+  </div>
+ </div>
+</section>
+
+<section class="values">
+ <div class="content reveal">
+  <div class="valueHeader">
+   <div><div class="label">02 / What I bring</div><h2 class="title">THREE<br><em>THINGS.</em></h2></div>
+   <p>The qualities that matter when the brief changes, the deadline gets closer, or nobody knows the answer yet.</p>
+  </div>
+  <div class="valuesGrid">
+   <div class="value"><div class="valueNo">01</div><h3>I LEARN FAST.</h3><p>New tool? New domain? New constraint? I’m comfortable being a beginner long enough to become useful.</p></div>
+   <div class="value"><div class="valueNo">02</div><h3>I THINK IN SYSTEMS.</h3><p>I look beyond the first feature and think about how the pieces connect, behave and scale.</p></div>
+   <div class="value"><div class="valueNo">03</div><h3>I KEEP GOING.</h3><p>The first attempt failing isn't the end of the idea. It's information for the next attempt.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="mindset">
+ <div class="mindsetInner reveal">
+  <div class="label">03 / The operating principle</div>
+  <h2>I DON'T PROMISE<br>TO KNOW EVERYTHING.<br><span>I PROMISE TO<br>FIGURE IT OUT.</span></h2>
+  <div class="mindsetBottom">
+   <p>That mindset is what lets me move between ideas, tools and problems without waiting for someone to hand me a perfect roadmap.</p>
+   <b>Learn → Build → Break → Improve</b>
+  </div>
+ </div>
+</section>
+
+<section class="opportunity">
+ <div class="content oppGrid reveal">
+  <div class="oppText">
+   <div class="label">04 / Where I fit</div>
+   <h2 class="title">PUT ME<br>WHERE<br>THINGS ARE<br><em>HARD.</em></h2>
+   <p>I’m most useful where there is something to figure out — an ambitious idea, an unfamiliar problem, a prototype that needs to become real, or a team that wants someone who learns by doing.</p>
+  </div>
+  <div class="oppList">
+   <div class="opp"><span>Build something from zero</span><span>01</span></div>
+   <div class="opp"><span>Turn an idea into a prototype</span><span>02</span></div>
+   <div class="opp"><span>Explore an unfamiliar technology</span><span>03</span></div>
+   <div class="opp"><span>Solve a problem nobody has solved yet</span><span>04</span></div>
+   <div class="opp"><span>Work with people who raise the bar</span><span>05</span></div>
+  </div>
+ </div>
+</section>
+
+<section class="final" id="contact">
+ <div class="rings"></div>
+ <div class="finalInner reveal">
+  <div class="label">05 / Your decision</div>
+  <h2>DON'T ASK<br>WHAT I'VE DONE.<br>ASK WHAT WE CAN<br><span>BUILD NEXT.</span></h2>
+  <p>If you’re looking for someone who is curious enough to learn, stubborn enough to solve, and obsessed enough to build — let's talk.</p>
+  <div class="links">
+   <!-- REPLACE THE PLACEHOLDERS BELOW -->
+   <a href="#" target="_blank">GitHub</a>
+   <a href="#" target="_blank">LinkedIn</a>
+   <a href="mailto:YOUR_EMAIL@example.com">Email</a>
+   <a href="#" target="_blank">X / Twitter</a>
+   <a href="#" target="_blank">Reddit</a>
+   <a href="#" target="_blank">Discord</a>
+  </div>
+  
+ </div>
+</section>
+
+<footer><span>UDAYRAJ.DEV</span><span>WHY HIRE ME</span></footer>
+
+<script>
+const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('show')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
